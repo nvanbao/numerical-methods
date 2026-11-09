@@ -19,3 +19,4 @@ if __name__ == "__main__":
     df = lambda x: 3 * x**2 - 1
     root, iters = newton_raphson(f, df, 1.5)
     print(f"Nghiệm: {root:.6f} sau {iters} lần lặp")
+    print(f"f(nghiệm) = {f(root):.2e}")
