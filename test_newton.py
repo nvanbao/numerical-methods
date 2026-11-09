@@ -18,6 +18,10 @@ class TestNewton(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):
             newton_raphson(lambda x: x**2 - 1, lambda x: 2 * x, 0)
 
+    def test_invalid_tol_raises(self):
+        with self.assertRaises(ValueError):
+            newton_raphson(lambda x: x - 1, lambda x: 1, 0, tol=-1)
+
 
 if __name__ == "__main__":
     unittest.main()
