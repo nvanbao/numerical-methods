@@ -1,5 +1,7 @@
 def newton_raphson(f, df, x0, tol=1e-6, max_iter=100):
     """Tìm nghiệm của f(x) = 0 bằng phương pháp Newton-Raphson."""
+    if tol <= 0:
+        raise ValueError("tol phải dương")
     x = x0
     for i in range(1, max_iter + 1):
         d = df(x)
