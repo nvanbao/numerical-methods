@@ -1,5 +1,9 @@
 def bisection(f, a, b, tol=1e-6, max_iter=100):
     """Tìm nghiệm của f(x) = 0 trong [a, b] bằng phương pháp chia đôi."""
+    if a >= b:
+        raise ValueError("Cần a < b")
+    if tol <= 0:
+        raise ValueError("tol phải dương")
     if f(a) * f(b) > 0:
         raise ValueError("f(a) và f(b) phải trái dấu")
     for i in range(1, max_iter + 1):
