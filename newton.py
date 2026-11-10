@@ -1,5 +1,16 @@
 def newton_raphson(f, df, x0, tol=1e-6, max_iter=100):
-    """Tìm nghiệm của f(x) = 0 bằng phương pháp Newton-Raphson."""
+    """Tìm nghiệm của f(x) = 0 bằng phương pháp Newton-Raphson.
+
+    Tham số:
+        f: hàm cần tìm nghiệm
+        df: đạo hàm của f
+        x0: giá trị khởi đầu
+        tol: sai số cho phép (mặc định 1e-6)
+        max_iter: số lần lặp tối đa (mặc định 100)
+
+    Trả về:
+        (nghiệm gần đúng, số lần lặp đã dùng)
+    """
     if tol <= 0:
         raise ValueError("tol phải dương")
     x = x0
