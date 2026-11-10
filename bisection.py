@@ -1,5 +1,15 @@
 def bisection(f, a, b, tol=1e-6, max_iter=100):
-    """Tìm nghiệm của f(x) = 0 trong [a, b] bằng phương pháp chia đôi."""
+    """Tìm nghiệm của f(x) = 0 trong [a, b] bằng phương pháp chia đôi.
+
+    Tham số:
+        f: hàm liên tục trên [a, b]
+        a, b: hai đầu đoạn, cần a < b và f(a), f(b) trái dấu
+        tol: sai số cho phép (mặc định 1e-6)
+        max_iter: số lần lặp tối đa (mặc định 100)
+
+    Trả về:
+        (nghiệm gần đúng, số lần lặp đã dùng)
+    """
     if a >= b:
         raise ValueError("Cần a < b")
     if tol <= 0:
