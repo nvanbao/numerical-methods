@@ -22,6 +22,18 @@ class TestNewton(unittest.TestCase):
         with self.assertRaises(ValueError):
             newton_raphson(lambda x: x - 1, lambda x: 1, 0, tol=-1)
 
+    def test_converges_quickly(self):
+        f = lambda x: x**3 - x - 2
+        df = lambda x: 3 * x**2 - 1
+        _, iters = newton_raphson(f, df, 1.5)
+        self.assertLessEqual(iters, 5)
+
+    def test_max_iter_limit(self):
+        _, iters = newton_raphson(
+            lambda x: x**2 - 2, lambda x: 2 * x, 1, tol=1e-12, max_iter=1
+        )
+        self.assertEqual(iters, 1)
+
 
 if __name__ == "__main__":
     unittest.main()
