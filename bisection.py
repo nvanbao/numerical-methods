@@ -21,3 +21,4 @@ if __name__ == "__main__":
     f = lambda x: x**3 - x - 2
     root, iters = bisection(f, 1, 2)
     print(f"Nghiệm: {root:.6f} sau {iters} lần lặp")
+    print(f"f(nghiệm) = {f(root):.2e}")
