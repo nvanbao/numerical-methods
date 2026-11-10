@@ -10,11 +10,16 @@ Các phương pháp số cài đặt bằng Python (môn Numerical Methods).
 
     python bisection.py
     python newton.py
+
 ## Kết quả mẫu
 
 Giải x³ - x - 2 = 0, nghiệm khoảng 1.521380:
 - Chia đôi: khoảng 20 lần lặp
 - Newton-Raphson: khoảng 3 lần lặp
+
+## Cấu trúc
+- `bisection.py`, `newton.py`: cài đặt các phương pháp
+- `test_bisection.py`, `test_newton.py`: test tương ứng
 
 ## Chạy test
 
