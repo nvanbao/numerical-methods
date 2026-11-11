@@ -7,3 +7,9 @@ def simpson(f, a, b, n=100):
     for i in range(1, n):
         total += (4 if i % 2 == 1 else 2) * f(a + i * h)
     return total * h / 3
+
+
+if __name__ == "__main__":
+    import math
+
+    print(f"Tích phân sin(x) từ 0 đến pi: {simpson(math.sin, 0, math.pi):.6f}")
