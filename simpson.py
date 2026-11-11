@@ -4,3 +4,6 @@ def simpson(f, a, b, n=100):
         raise ValueError("n phải là số chẵn dương")
     h = (b - a) / n
     total = f(a) + f(b)
+    for i in range(1, n):
+        total += (4 if i % 2 == 1 else 2) * f(a + i * h)
+    return total * h / 3
