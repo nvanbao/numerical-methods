@@ -21,3 +21,19 @@ class TestGauss(unittest.TestCase):
         x = gauss_elimination([[0, 1], [1, 1]], [1, 2])
         self.assertAlmostEqual(x[0], 1.0, places=6)
         self.assertAlmostEqual(x[1], 1.0, places=6)
+
+    def test_singular_raises(self):
+        with self.assertRaises(ValueError):
+            gauss_elimination([[1, 2], [2, 4]], [3, 6])
+
+    def test_non_square_raises(self):
+        with self.assertRaises(ValueError):
+            gauss_elimination([[1, 2, 3], [4, 5, 6]], [1, 2])
+
+    def test_wrong_b_length_raises(self):
+        with self.assertRaises(ValueError):
+            gauss_elimination([[1, 2], [3, 4]], [1])
+
+
+if __name__ == "__main__":
+    unittest.main()
