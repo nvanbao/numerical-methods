@@ -22,3 +22,10 @@ def gauss_elimination(A, b):
         s = sum(M[i][j] * x[j] for j in range(i + 1, n))
         x[i] = (M[i][n] - s) / M[i][i]
     return x
+
+
+if __name__ == "__main__":
+    A = [[2, 1, -1], [-3, -1, 2], [-2, 1, 2]]
+    b = [8, -11, -3]
+    x = gauss_elimination(A, b)
+    print("Nghiệm:", [round(v, 6) for v in x])
