@@ -16,3 +16,9 @@ def gauss_elimination(A, b):
             factor = M[r][col] / M[col][col]
             for c in range(col, n + 1):
                 M[r][c] -= factor * M[col][c]
+
+    x = [0.0] * n
+    for i in range(n - 1, -1, -1):
+        s = sum(M[i][j] * x[j] for j in range(i + 1, n))
+        x[i] = (M[i][n] - s) / M[i][i]
+    return x
