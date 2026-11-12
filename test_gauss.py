@@ -10,3 +10,14 @@ class TestGauss(unittest.TestCase):
         x = gauss_elimination(A, b)
         for got, want in zip(x, [2, 3, -1]):
             self.assertAlmostEqual(got, want, places=6)
+
+    def test_2x2(self):
+        x = gauss_elimination([[1, 1], [1, -1]], [3, 1])
+        self.assertAlmostEqual(x[0], 2.0, places=6)
+        self.assertAlmostEqual(x[1], 1.0, places=6)
+
+    def test_needs_pivoting(self):
+        # phần tử đầu bằng 0, phải đổi dòng mới giải được
+        x = gauss_elimination([[0, 1], [1, 1]], [1, 2])
+        self.assertAlmostEqual(x[0], 1.0, places=6)
+        self.assertAlmostEqual(x[1], 1.0, places=6)
