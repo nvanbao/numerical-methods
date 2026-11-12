@@ -5,3 +5,4 @@ def gauss_elimination(A, b):
         raise ValueError("A phải là ma trận vuông")
     if len(b) != n:
         raise ValueError("b phải có cùng số dòng với A")
+    M = [row[:] + [b[i]] for i, row in enumerate(A)]
