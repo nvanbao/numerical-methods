@@ -32,6 +32,11 @@ Giải hệ 3 phương trình bằng khử Gauss: nghiệm [2.0, 3.0, -1.0]
 ## Chạy test
 
     python -m unittest
+## Đã có 
+    - Nội suy Lagrange (`lagrange.py`)
+    - Phương pháp Euler giải phương trình vi phân (`euler.py`)
+    python lagrange.py
+    python euler.py
 
 ## Yêu cầu
 - Python 3.8+
