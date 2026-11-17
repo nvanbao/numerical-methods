@@ -12,4 +12,4 @@ def simpson(f, a, b, n=100):
 if __name__ == "__main__":
     import math
 
-    print(f"Tích phân sin(x) từ 0 đến pi: {simpson(math.sin, 0, math.pi):.6f}")
+    print(f"Tích phân sin(x) từ 0 đến pi: {simpson(math.sin, 0, math.pi):.6f}") 
