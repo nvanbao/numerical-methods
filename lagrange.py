@@ -13,3 +13,9 @@ def lagrange(xs, ys, x):
                 term *= (x - xs[j]) / (xs[i] - xs[j])
         total += term
     return total
+
+
+if __name__ == "__main__":
+    xs = [0, 1, 2]
+    ys = [1, 3, 7]  # đa thức x^2 + x + 1
+    print(f"P(1.5) = {lagrange(xs, ys, 1.5):.4f}")
