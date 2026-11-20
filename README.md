@@ -7,14 +7,16 @@ Các phương pháp số cài đặt bằng Python (môn Numerical Methods).
 - Phương pháp Newton-Raphson (`newton.py`)
 - Quy tắc Simpson 1/3 (`simpson.py`)
 - Khử Gauss giải hệ phương trình tuyến tính (`gauss.py`)
-
+- Quy tắc hình thang tính tích phân (`trapezoid.py`)
+- Runge-Kutta bậc 4 giải phương trình vi phân (`rk4.py`)
 ## Cách chạy
 
     python bisection.py
     python newton.py
     python simpson.py
     python gauss.py
-
+    python trapezoid.py
+    python rk4.py
 ## Kết quả mẫu
 
 Giải x³ - x - 2 = 0, nghiệm khoảng 1.521380:
